@@ -1,12 +1,16 @@
 
 exports.min = function min (array) {
-  return 0;
+  if (typeof array === 'undefined' || (array.lenght === 0) ) {return 0;}
+    return Math.min(...array);
 }
 
 exports.max = function max (array) {
-  return 0;
-}
-
+  if (typeof array === 'undefined' || (array.lenght === 0) ) {return 0;}
+      return Math.max(...array);
+  }
 exports.avg = function avg (array) {
-  return 0;
-}
+  if (typeof array === 'undefined' || (array.lenght === 0) ) {return 0;}
+  let sum = 0;
+    array.forEach (el => sum += el);
+    return sum / array.length;
+  }
